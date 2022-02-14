@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RKM | Front End Dev</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/rkm-logo.png" alt="">
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+                <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!---------------------------- Background Music --------------------------------------->
+    <div class="right-col">
+        <p><b>Music</b></p>
+    <img src="img/play-button.png" id="icon">
+    
+    </div>
+    
+    <audio id="BgMusic">
+        <source src="music/background.mp3" type="audio/mp3">
+    </audio>
+    
+    <script>
+        var BgMusic = document.getElementById ("BgMusic");
+        var icon = document.getElementById ("icon");
+        document.getElementById("BgMusic").loop = true; 
+        icon.onclick = function(){
+            if(BgMusic.paused){
+                BgMusic.play();
+                icon.src="img/pause.png";
+            }
+            else{
+                BgMusic.pause();
+                icon.src="img/play-button.png";
+            }
+         
+        }
+    </script>
+
+   <!---------------------------- Background Music ends--------------------------------------->
+        <!-- It's the Intro part -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I am <strong>Rohan Kumar Manna</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">front-end dev</p>
+            <img src="img/rkm-2.png" alt="a picture of Rohan Kumar Manna smiling" class="intro__img">
+        </section>
+    
+<!-- the services section -->
+<section class="my-services" id="services">
+    <h2 class="section__title section__title--services">What I do</h2>
+    <div class="services">
+        <div class="service">
+            <h3>Front end development</h3>
+            <p>I'm a front end devloper, still Improving my skills & learning some back end stuff
+            </p>
+        </div> <!-- / service -->
+        
+        <div class="service">
+            <h3>Vector Design</h3>
+            <p>I'm a vector graphics editor(not really),though I can make some okish design
+            </p>
+        </div> <!-- / service -->
+
+        <div class="service">
+            <h3>CAD</h3>
+            <p>I know the basics of CAD(Computer Aided Drafting/Design), I linked a project below.
+            </p>
+        </div> <!-- / service -->
+        
+        <div class="service">
+            <h3>Digital Marketing</h3>
+            <p>Yup ! I know a thing or two about <a href="pdf/DgM_certificate.pdf" target="_blank" style="color: aliceblue;">Digital Marketing</a>
+            </p>
+        </div> <!-- / service -->
+
+        <div class="service">
+            <h3>Learning</h3>
+            <p>I'm currently learning <b>C & C++</b> and <b>Data structures and Algorithms</b>, I don't know it's a good poin to showcase or not! but whatever.
+            </p>
+        </div> <!-- / service -->
+    </div> <!-- / services -->
+    
+    <a href="#work" class="btn">My Work</a>
+</section>
+
+<!-- bout me MF -->
+<section class="about-me" id="about">
+    
+    <h2 class="section__title section__title--about">Who I am</h2>
+    <p class="section__subtitle section__subtitle--about"> Front-end developer    
+    </p>
+    
+
+    <div class="about-me__body">
+        <p>I’m a Front-End Developer located in India. I have a serious passion for CSS, I also love <b>Java, C, C++</b> and <b>Python</b> though I'm devloping my skills in those feilds.Interested in the entire frontend spectrum and working on ambitious projects with positive people.</p>
+        <p>Just a 19 y/o teen who loves to code, problem solver, student. Fan of Anime, Lofi Music, Illustration, Digital art.</p>
+    </div>
+    
+    <img src="img/rkm-1.jpg" alt="rkm bw potrate" class="about-me__img">
+ </section>
+
+
+ <!-- My Work -->
+ <section class="my-work" id="work">
+    <h2 class="section__title section__title--work">My work</h2>
+    <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
+
+
+    <div class="portfolio">
+        <!-- Portfolio item 01 -->
+        <a href="https://olelk.github.io/Stock-Photo-product-landing-page/" target="_blank" class="portfolio__item">
+            <img src="img/Portfolio-1.png" alt="Stock Photo webpage" class="portfolio__img" >
+        </a>
+        
+        <!-- Portfolio item 02 -->
+        <a href="https://olelk.github.io/Social-Media-Usage-Survey-Form/" target="_blank" class="portfolio__item">
+            <img src="img/portfolio-2.png"  alt="survey webpage" class="portfolio__img" >
+        </a>
+        
+        <!-- Portfolio item 03 -->
+        <a href="https://a360.co/3smt1Jr" class="portfolio__item" target="_blank">
+            <img src="img/AirShip.png" alt="air_ship CAD modle" class="portfolio__img" >
+        </a>
+        
+       
+        <!--have nothing to show for now-->
+        <!-- Portfolio item 04 -->
+        <!-- <a href="#" class="portfolio__item">
+            <img src="img/--past_img_here--.jpg" alt="" class="portfolio__img">
+        </a> -->
+        
+        <!-- Portfolio item 05 -->
+        <a href="#" class="portfolio__item">
+            <img src="img/--past_img_here--.jpg" alt="" class="portfolio__img">
+        </a>
+        
+        <!-- Portfolio item 06 --> <!--have nothing to show for now--> <!-- 
+        <a href="#" class="portfolio__item">
+            <img src="img/--past_img_here--.jpg" alt="" class="portfolio__img">
+        </a>-->
+        
+        <!-- Portfolio item 07 --><!--have nothing to show for now--> <!--
+        <a href="#" class="portfolio__item">
+            <img src="img/--past_img_here--.jpg" alt="" class="portfolio__img">
+        </a>-->
+        
+        <!-- Portfolio item 08 --><!--have nothing to show for now--> <!--
+        <a href="#" class="portfolio__item">
+            <img src="img/--past_img_here--.jpg" alt="" class="portfolio__img">
+        </a>-->
+        
+        <!-- Portfolio item 09 --><!--have nothing to show for now--> <!--
+        <a href="#" class="portfolio__item">
+            <img src="img/--past_img_here--.jpg" alt="" class="portfolio__img">
+        </a>-->
+        
+        <!-- Portfolio item 10--><!--have nothing to show for now--> <!--
+        <a href="#" class="portfolio__item">
+            <img src="img/--past_img_here--.jpg" alt="" class="portfolio__img">
+        </a>-->
+  
+    </div>
+</section>
+
+
+        <!-- Footer area -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:rohankumarmanna@gmail.com" class="footer__link">Rohan Kumar Manna</a>
+            <ul class="social-list">
+                <li class="social-list__item"><a class="social-list__link" href="https://github.com/OLELK">
+                    <i class="fab fa-github"></i>
+                    </a></li>
+                <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/rohan-manna-a078a0227/">
+                    <i class="fab fa-linkedin"></i></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="https://discord.gg/5xmUpu2s">
+                    <i class="fab fa-discord"></i></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="https://twitter.com/RohanKumarmann1">
+                    <i class="fab fa-twitter"></i></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="https://www.instagram.com/rohankumarmanna/">
+                <i class="fab fa-instagram"></i>
+                  </a></li>
+            </ul>
+        </footer>
+
+     <script src="js/index.js"></script>
+</body>
+</html>
